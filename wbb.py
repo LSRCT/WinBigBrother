@@ -11,7 +11,7 @@ def dump_logs(sf, logs):
     Try/except so you can open the file without crashing.
     """
     try:
-        with open(sf, 'w', encoding="utf-8") as f:
+        with open(sf, 'a', encoding="utf-8") as f:
             for l in logs:
                 f.write(f"{l[0]};{l[1]}\n")
         return 1
